@@ -9,6 +9,19 @@ public class AxisAlignedBoundingBox implements BoundingVolume {
 	 */
 	
 	/**
+	 * <p>Class constructor which assumes the center of this bounding volume
+	 * is at the center of the object it is associated with. This constructor
+	 * does allow a <code>width</code> and <code>height</code> to be
+	 * specified.</p>
+	 * 
+	 * @param width The width of this bounding box.
+	 * @param height The height of this bounding box.
+	 */
+	public AxisAlignedBoundingBox(float width, float height) {
+		this(new Vertex2d(0.0f, 0.0f), width, height);
+	}
+	
+	/**
 	 * <p>Class constructor. Allows the <code>width</code> and <code>height</code>
 	 * of this axis aligned bounding box to be specified.</p>
 	 * 
