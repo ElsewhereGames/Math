@@ -61,6 +61,18 @@ public class Vertex2d implements Cloneable, Serializable {
 	}
 	
 	/**
+	 * <p>Adds the specified <code>x</code> and <code>y</code> components to 
+	 * this vertex.</p>
+	 * 
+	 * @param x The x component to add to this vertex.
+	 * @param y The y component to add to this vertex.
+	 */
+	public final void add(final float x, final float y) {
+		this.x = this.x + x;
+		this.y = this.y + y;
+	}
+	
+	/**
 	 * <p>Calculates the angle between the <code>otherVertex</code> and this
 	 * vertex, expressed in radians.</p>
 	 * 
