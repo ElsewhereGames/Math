@@ -47,6 +47,30 @@ public class MathUtilities {
 		return (Math.abs(value1 - value2) < MathUtilities.EPSILON);
 	}
 	
+	/**
+	 * <p>Rounds the given <code>value</code> up to the nearest power of two.</p>
+	 * 
+	 * @param value The value to round up to the nearest power of two.
+	 * @return The next power of two greater than <code>value</code>.
+	 */
+	public static int nextPowerOfTwo(int value) {
+		// The algorithm below does not work if value is zero:
+		if (value == 0) {
+			return 2;
+		}
+		
+		// This uses the bit-twiddling hacks described on the Stanford site:
+		int result = value - 1;
+		result |= result >> 1;
+		result |= result >> 2;
+		result |= result >> 4;
+		result |= result >> 8;
+		result |= result >> 16;
+		result++;
+		
+		return result;
+	}
+	
 	/*
 	 * Mathematical Constants
 	 */
